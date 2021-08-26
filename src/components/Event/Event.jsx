@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa';
 import { formatEventDuration, formatEventStart } from 'utils';
-import { iconSize } from 'contants';
+import { iconSize } from 'constants';
 import css from './Event.module.css';
 
 export const Event = ({ name, location, speaker, type, start, end }) => {
