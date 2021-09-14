@@ -1,12 +1,18 @@
 export const theme = Object.freeze({
   colors: {
-    white: '#ffffff',
-    black: '#010101',
-    green: '#4caf50',
-    red: '#f44336',
-    blue: '#2196f3',
-    primaryText: '#212121',
-    secondaryText: '#757575',
+    primary: '#1976d2',
+    secondary: '#dc004e',
+    error: '#f44336',
+    warning: '#ff9800',
+    info: '#2196f3',
+    success: '#4caf50',
+    common: {
+      white: '#ffffff',
+      black: '#000000',
+    },
+    text: {
+      primary: '#212121',
+      secondary: '#757575',
+    },
   },
-  spacing: value => `${4 * value}px`,
 });
