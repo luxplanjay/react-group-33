@@ -1,43 +1,27 @@
-import { Component } from 'react';
+import { useState, useEffect } from 'react';
 import { PlayerWrapper, StyledPlayer } from './Player.styled';
 
-export class Player extends Component {
-  state = {
-    isVideoLoaded: false,
-  };
+export const Player = ({ url }) => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const showLoader = url && !isVideoLoaded;
+  const playerSize = isVideoLoaded ? '100%' : 0;
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.url !== this.props.url) {
-      this.setState({ isVideoLoaded: false });
-    }
-  }
+  useEffect(() => setIsVideoLoaded(false), [url]);
 
-  render() {
-    const { isVideoLoaded } = this.state;
-    const { url } = this.props;
-    const showLoader = url && !isVideoLoaded;
-    const playerWidth = isVideoLoaded ? '100%' : 0;
-    const playerHeight = isVideoLoaded ? '100%' : 0;
-
-    return (
-      <>
-        {showLoader && <h2>Загружаем видео...</h2>}
-        {url && (
-          <PlayerWrapper>
-            <StyledPlayer
-              url={url}
-              width={playerWidth}
-              height={playerHeight}
-              onReady={() =>
-                this.setState({
-                  isVideoLoaded: true,
-                })
-              }
-              controls
-            />
-          </PlayerWrapper>
-        )}
-      </>
-    );
-  }
-}
+  return (
+    <>
+      {showLoader && <h2>Загружаем видео...</h2>}
+      {url && (
+        <PlayerWrapper>
+          <StyledPlayer
+            url={url}
+            width={playerSize}
+            height={playerSize}
+            onReady={() => setIsVideoLoaded(true)}
+            controls
+          />
+        </PlayerWrapper>
+      )}
+    </>
+  );
+};

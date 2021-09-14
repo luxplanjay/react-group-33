@@ -8,7 +8,7 @@ export const StyledButton = styled.button`
   padding: 8px 12px;
   border: none;
   border-radius: 2px;
-  color: ${props => props.theme.colors.common.white};
+  color: ${props => props.theme.colors.secondary};
   background-color: ${props => props.theme.colors.primary};
   text-transform: uppercase;
   cursor: pointer;
