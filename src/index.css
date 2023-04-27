@@ -1,58 +1,32 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
 
-.event {
-  position: relative;
-  border: 2px dashed black;
-  padding: 8px;
-  border-radius: 4px;
+:root {
+  --color-white: #ffffff;
+  --color-black: #010101;
+  --color-green: #4caf50;
+  --color-red: #f44336;
+  --color-blue: #2196f3;
+  --color-primary-text: #212121;
+  --color-secondary-text: #757575;
 }
 
-.title {
-  margin-top: 0;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+* {
+  box-sizing: border-box;
 }
 
-.info {
-  display: flex;
-  align-items: center;
-  margin-top: 0;
-  margin-bottom: 8px;
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: var(--color-primary-text);
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  letter-spacing: 0.25px;
+  line-height: 1.5;
+  background-color: #fafafa;
+  scroll-behavior: smooth;
 }
 
-.icon {
-  display: block;
-  margin-right: 8px;
-  color: var(--color-secondary-text);
-}
-
-.chip {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  padding: 4px 8px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  background-color: #000;
-  color: #fff;
-}
-
-.free {
-  background-color: var(--color-green);
-}
-
-.paid {
-  background-color: var(--color-blue);
-}
-
-.vip {
-  background-color: var(--color-red);
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

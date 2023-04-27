@@ -36,8 +36,8 @@ return <div className={css.event}>
   <FaClock className={css.icon} size={iconsSet.sm.size} color={iconsSet.sm.color}/>
   {duration}
 </p>
-{/* <span className={`${css.chip} ${css[type]}`}>{type}</span> */}
-<span className={css.chip}>{type}</span>
+<span className={`${css.chip} ${css[type]}`}>{type}</span>
+{/* <span className={css.chip}>{type}</span> */}
 </div>
 }
 
