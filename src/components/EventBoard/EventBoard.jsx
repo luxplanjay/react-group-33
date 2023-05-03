@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import { Event } from 'components/Event/Event';
 // import { Board } from './EventBoard.styled';
-import css from "./EventBoard.module.css"
+// import css from "./EventBoard.module.css"
+import { BoardStyle } from './EventBoard.styled';
 
 export const EventBoard = ({ events }) => {
   return (
-    <div className={css.eventBoard}>
+    <BoardStyle>
       {events.map(({ name, location, speaker, type, time }) => (
         <Event
           key={name}
@@ -17,7 +18,7 @@ export const EventBoard = ({ events }) => {
           end={time.end}
         />
       ))}
-    </div>
+    </BoardStyle>
   );
 };
 

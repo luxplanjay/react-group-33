@@ -1,7 +1,8 @@
 export const iconsSet = {
     sm: {
       size: 16,
-      color: 'grey',
+      // color: 'grey',
+      color: `${props => props.theme.colors.grey}`
     },
     // другие размеры и цвета
   };
