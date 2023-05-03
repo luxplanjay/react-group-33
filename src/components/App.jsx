@@ -4,6 +4,8 @@ import { EventBoard } from "./EventBoard/EventBoard";
 // upcomingEvents
 import upcoming from "./upcoming.json"
 
+import Counter from "./counter/couneter";
+
 
 
 export const App = () => {
@@ -11,6 +13,8 @@ export const App = () => {
  
 <PageTitle text="24th Core Worlds Coalition Conference" />
 <EventBoard events={upcoming}/>
+
+<Counter/>
     </>
   );
 };
