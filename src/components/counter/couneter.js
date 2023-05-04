@@ -39,27 +39,28 @@ state ={value:5};
 
 handleIncrement = (event) => {
 
-this.setState({value:10})
-    
+
+    // Если меняем что то 1 раз , передаём обьект. 
+// this.setState({value:10})
+
+// this.setState(prevState => {return {value:prevState.value+1}})
+// Идентичная запись короче
+this.setState(prevState => ({value:prevState.value+1}))
 
     console.log("кликнули на увеличить");
+         
+}
 
+handleDecrement = (event) => {
+  
+this.setState(prevState => ({value: prevState.value - 1}))
 
-    setTimeout(() => {
-        console.log(event.target);
-
-         },2000)
+    console.log("кликнули на уменьшить");
          
 }
 
 
 
-handleDecrement = (event) => {
-
-    console.log("кликнули на уменьшть")
-    console.log('кликнули на уменьшть this', this)
-    console.log(event.target)
-}
 
     render (){
     return(
