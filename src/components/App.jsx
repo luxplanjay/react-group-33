@@ -5,7 +5,7 @@ import { EventBoard } from "./EventBoard/EventBoard";
 import upcoming from "./upcoming.json"
 
 import Counter from "./counter/couneter";
-
+import Dropdown from "./Dropdown/Dropdown"
 
 
 export const App = () => {
@@ -15,6 +15,8 @@ export const App = () => {
 <EventBoard events={upcoming}/>
 
 <Counter initialValue={100}/>
+
+<Dropdown/>
     </>
   );
 };

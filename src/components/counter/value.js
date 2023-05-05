@@ -1,9 +1,9 @@
 import React from "react";
 import {
-    CounterWrapper,
+  
     CounterValue,
-    CounterControls,
-    CounterButton,
+   
+   
   } from './counter.styled.jsx';
 
 
