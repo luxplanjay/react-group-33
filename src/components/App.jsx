@@ -14,7 +14,7 @@ export const App = () => {
 <PageTitle text="24th Core Worlds Coalition Conference" />
 <EventBoard events={upcoming}/>
 
-<Counter/>
+<Counter initialValue={100}/>
     </>
   );
 };
