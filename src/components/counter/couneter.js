@@ -1,4 +1,6 @@
 import React from 'react';
+import Controls from './controls.js';
+import Value from './value.js';
 import {
   CounterWrapper,
   CounterValue,
@@ -63,27 +65,25 @@ static defaultProps = {
 
   render () {
     return (
-      <CounterWrapper className='Counter'>
-        <CounterValue className='Counter__value'>
-          {this.state.value}
-        </CounterValue>
 
-        <CounterControls className='Counter__controls'>
-          <CounterButton
-            type='button'
-            className='Counter__ad'
-            onClick={this.handleIncrement}
-          >
-            Увеличить на 1
-          </CounterButton>
-          <CounterButton
-            type='button'
-            className='Counter__deduct'
-            onClick={this.handleDecrement}
-          >
-            Уменшить на 1
-          </CounterButton>
-        </CounterControls>
+   
+
+
+
+        
+      <CounterWrapper className='Counter'>
+        {/* <CounterValue className='Counter__value'>
+          {this.state.value}
+        </CounterValue> */}
+
+<Value value={this.state.value}/>
+
+        <Controls  
+        onIncrement={this.handleIncrement} onDecrement ={this.handleDecrement}
+
+       
+        />
+   
       </CounterWrapper>
     );
   }
