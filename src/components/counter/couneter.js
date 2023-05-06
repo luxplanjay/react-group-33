@@ -3,9 +3,9 @@ import Controls from './controls.js';
 import Value from './value.js';
 import {
   CounterWrapper,
-  CounterValue,
-  CounterControls,
-  CounterButton,
+  // CounterValue,
+  // CounterControls,
+  // CounterButton,
 } from './counter.styled.jsx';
 // import { set } from 'date-fns';
 
